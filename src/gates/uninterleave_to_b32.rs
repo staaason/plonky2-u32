@@ -35,7 +35,7 @@ use plonky2::util::serialization::{Buffer, IoResult, Read, Write};
 ///
 /// Given a Goldilocks field element, treat it as 0bxyxyxy...
 /// and split it into two B32Targets, 0b0x0x0x... and 0b0y0y0y...
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, Default)]
 pub struct UninterleaveToB32Gate {
     pub num_ops: usize,
 }
@@ -314,7 +314,7 @@ for UninterleaveToB32Gate
     }
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Default)]
 pub struct UninterleaveToB32Generator {
     gate: UninterleaveToB32Gate,
     row: usize,

@@ -25,7 +25,7 @@ use plonky2::plonk::vars::{
 };
 
 /// A gate to perform a basic mul-add on 32-bit values (we assume they are range-checked beforehand).
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, Default)]
 pub struct U32ArithmeticGate<F: RichField + Extendable<D>, const D: usize> {
     pub num_ops: usize,
     _phantom: PhantomData<F>,
@@ -351,7 +351,7 @@ impl<F: RichField + Extendable<D>, const D: usize> PackedEvaluableBase<F, D>
     }
 }
 
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Default)]
 pub struct U32ArithmeticGenerator<F: RichField + Extendable<D>, const D: usize> {
     pub gate: U32ArithmeticGate<F, D>,
     pub row: usize,

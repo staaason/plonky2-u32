@@ -24,7 +24,7 @@ const LOG2_MAX_NUM_ADDENDS: usize = 4;
 const MAX_NUM_ADDENDS: usize = 16;
 
 /// A gate to perform addition on `num_addends` different 32-bit values, plus a small carry
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, Default)]
 pub struct U32AddManyGate<F: RichField + Extendable<D>, const D: usize> {
     pub num_addends: usize,
     pub num_ops: usize,
@@ -284,7 +284,7 @@ impl<F: RichField + Extendable<D>, const D: usize> Gate<F, D> for U32AddManyGate
     }
 }
 
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Default)]
 pub struct U32AddManyGenerator<F: RichField + Extendable<D>, const D: usize> {
     pub gate: U32AddManyGate<F, D>,
     pub row: usize,
