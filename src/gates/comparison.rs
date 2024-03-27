@@ -413,9 +413,9 @@ impl<F: RichField + Extendable<D>, const D: usize> PackedEvaluableBase<F, D>
 }
 
 #[derive(Debug, Clone)]
-struct ComparisonGenerator<F: RichField + Extendable<D>, const D: usize> {
-    row: usize,
-    gate: ComparisonGate<F, D>,
+pub struct ComparisonGenerator<F: RichField + Extendable<D>, const D: usize> {
+    pub row: usize,
+    pub gate: ComparisonGate<F, D>,
 }
 
 impl<F: RichField + Extendable<D>, const D: usize> SimpleGenerator<F, D>

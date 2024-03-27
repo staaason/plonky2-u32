@@ -274,11 +274,11 @@ impl<F: RichField + Extendable<D>, const D: usize> PackedEvaluableBase<F, D>
 }
 
 #[derive(Clone, Debug)]
-struct U32SubtractionGenerator<F: RichField + Extendable<D>, const D: usize> {
-    gate: U32SubtractionGate<F, D>,
-    row: usize,
-    i: usize,
-    _phantom: PhantomData<F>,
+pub struct U32SubtractionGenerator<F: RichField + Extendable<D>, const D: usize> {
+    pub gate: U32SubtractionGate<F, D>,
+    pub row: usize,
+    pub i: usize,
+    pub _phantom: PhantomData<F>,
 }
 
 impl<F: RichField + Extendable<D>, const D: usize> SimpleGenerator<F, D>
