@@ -28,7 +28,7 @@ use plonky2::plonk::vars::{
 #[derive(Copy, Clone, Debug, Default)]
 pub struct U32SubtractionGate<F: RichField + Extendable<D>, const D: usize> {
     pub num_ops: usize,
-    _phantom: PhantomData<F>,
+    pub _phantom: PhantomData<F>,
 }
 
 impl<F: RichField + Extendable<D>, const D: usize> U32SubtractionGate<F, D> {

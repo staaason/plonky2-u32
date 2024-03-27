@@ -311,9 +311,9 @@ for UninterleaveToU32Gate
 
 #[derive(Debug, Clone, Default)]
 pub struct UninterleaveToU32Generator {
-    gate: UninterleaveToU32Gate,
-    row: usize,
-    i: usize,
+    pub gate: UninterleaveToU32Gate,
+    pub row: usize,
+    pub i: usize,
 }
 
 // Populate the bit wires and the x_interleaved wire, given that the x wire's value has been set

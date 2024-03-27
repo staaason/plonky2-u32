@@ -177,8 +177,8 @@ impl<F: RichField + Extendable<D>, const D: usize> Gate<F, D> for U32RangeCheckG
 
 #[derive(Debug, Clone, Default)]
 pub struct U32RangeCheckGenerator<F: RichField + Extendable<D>, const D: usize> {
-    gate: U32RangeCheckGate<F, D>,
-    row: usize,
+    pub gate: U32RangeCheckGate<F, D>,
+    pub row: usize,
 }
 
 impl<F: RichField + Extendable<D>, const D: usize> SimpleGenerator<F, D>

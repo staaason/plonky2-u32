@@ -268,9 +268,9 @@ impl<F: RichField + Extendable<D>, const D: usize> PackedEvaluableBase<F, D> for
 
 #[derive(Debug, Clone, Default)]
 pub struct U32InterleaveGenerator {
-    gate: U32InterleaveGate,
-    row: usize,
-    i: usize,
+    pub gate: U32InterleaveGate,
+    pub row: usize,
+    pub i: usize,
 }
 
 // Populate the bit wires and the x_interleaved wire, given that the x wire's value has been set
