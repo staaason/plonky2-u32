@@ -13,5 +13,5 @@ num = { version = "0.4", default-features = false }
 plonky2 = { git = "https://github.com/0xPolygonZero/plonky2.git", features = ["timing", "parallel"] }
 
 [dev-dependencies]
-plonky2 = { git = "https://github.com/0xPolygonZero/plonky2.git", default-features = false, features = ["gate_testing"] }
+plonky2 = { git = "https://github.com/0xPolygonZero/plonky2.git",  rev="54cee24b3683ec56551f08edef72470018eb4ba8", default-features = false, features = ["gate_testing"] }
 rand = { version = "0.8.4", default-features = false, features = ["getrandom"] }
