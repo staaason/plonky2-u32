@@ -10,7 +10,7 @@ edition = "2021"
 anyhow = { version = "1.0.40", default-features = false }
 itertools = { version = "0.10.0", default-features = false }
 num = { version = "0.4", default-features = false }
-plonky2 = { git = "https://github.com/0xPolygonZero/plonky2.git", features = ["timing", "parallel"] }
+plonky2 = { git = "https://github.com/0xPolygonZero/plonky2.git", rev="54cee24b3683ec56551f08edef72470018eb4ba8", features = ["timing", "parallel"] }
 
 [dev-dependencies]
 plonky2 = { git = "https://github.com/0xPolygonZero/plonky2.git",  rev="54cee24b3683ec56551f08edef72470018eb4ba8", default-features = false, features = ["gate_testing"] }
